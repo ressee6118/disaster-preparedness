@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Preparedness: Be Your Own Hero</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light blue background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007acc; /* Dark blue header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Horizontal list */
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            color: #007acc; /* Blue for section titles */
+        }
+
+        .content-section {
+            display: none; /* Hide all sections by default */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: white; /* White background for content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        #home {
+            display: block; /* Show the home section by default */
+        }
+
+        /* Style for the image on the home page */
+        #home img {
+            position: fixed; /* Fixed position */
+            right: 20px; /* Distance from the right side */
+            top: 190px; /* Distance from the top */
+            width: 270px; /* Fixed width */
+            height: 270px; /* Fixed height */
+            border-radius: 10px; /* Optional: make the image have rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #007acc; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #005f99; /* Darker blue on hover */
+        }
+#infographic img {
+            width: 200px; /* Adjust the width as needed */
+            margin: 10px; /* Add some spacing between images */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🦸🏻 Disaster Preparedness: Be Your Own Hero 🦸🏻‍♀️</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#emergency-contacts" onclick="showSection('emergency-contacts')">Emergency Contacts</a></li>
+                <li><a href="#checklist" onclick="showSection('checklist')">Checklist</a></li>
+                <li><a href="#safety-tips" onclick="showSection('safety-tips')">Safety Tips</a></li>
+                <li><a href="#infographic" onclick="showSection('infographic')">Infographic</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="content-section">
+        <h2>Welcome!</h2>
+        <p>This website helps you stay prepared for any emergency. Stay informed, be safe.</p>
+        <p>Philippines is an archipelago that is prone to disasters such as earthquakes, typhoons, floodings, and such (Balita, 2023. That is why through this 
+<br>website GROUP 10 of Empowerment Technologies would like to </br><br>a.) Impose the proper preparation and act (before, during, and after disaster). </br><br>b.) Explain the importance of a first aid kit. </br><br>c.) Enhance the understanding of an individual how to respond to that certain disaster. </br><br>d.) List the main emergency hotlines for easy navigation and access for the community.</br></p>
+
+        <!-- Add your image here -->
+        <img src="3.5.jpg" alt="Disaster preparedness image">
+    </section>
+    
+    <section id="emergency-contacts" class="content-section">
+        <h2>Emergency Contacts</h2>
+        <ul>
+            <li>National Emergency Hotline: 911</li>
+            <li>Philippine Red Cross: 143</li>
+            <li>Muntinlupa City Emergency Hotline: 137-175</li>
+            <li>PHILVOCS: 8929-8958</li>
+        </ul>
+    </section>
+
+    <section id="checklist" class="content-section">
+        <h2>Emergency Supply Checklist</h2>
+        <p>Preparing an emergency kit is important because it ensures you're ready to handle unexpected situations such as natural disasters, power outages, or accidents. Having essential supplies on hand can help you stay safe, manage basic needs, and maintain some level of comfort and security until help arrives or conditions improve. It can aid in communication and update you of necessary news.</p>
+        <hr>
+        <button onclick="showChecklist('earthquake')">Show Earthquake Checklist</button>
+        <button onclick="showChecklist('volcanic-eruption')">Show Volcanic Eruption Checklist</button>
+        <button onclick="showChecklist('typhoon')">Show Typhoon Checklist</button>
+        <div id="checklist-items"></div>
+    </section>
+
+
+    <section id="safety-tips" class="content-section">
+        <h2>Safety Tips</h2>
+        <p>Choose a disaster to see safety tips:</p>
+        <button onclick="showDisasterTips('earthquake')">Earthquake</button>
+        <button onclick="showDisasterTips('volcanic-eruption')">Volcanic Eruption</button>
+        <button onclick="showDisasterTips('typhoon')">Typhoon</button>
+        <div id="disaster-tips"></div>
+    </section>
+
+    <section id="infographic" class="content-section">
+        <h2>Infographic</h2>
+        <p>Download our infographic for more information on disaster preparedness:</p>
+        <a href="infographic.pdf" download>Download Infographic</a> 
+        <div><center>
+            <img src="1.jpg" alt="Infographic Image 1">
+            <img src="2.jpg" alt="Infographic Image 2">
+            <img src="3.jpg" alt="Infographic Image 3">
+        </center></div>
+    </section>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Disaster Preparedness: Be Your Own Hero</p>
+    </footer>
+
+    <script>
+
+ function showChecklist(disaster) {
+        let checklistItems = '';
+        if (disaster === 'earthquake') {
+            checklistItems = `
+                <h3>EARTHQUAKE EMERGENCY KIT</h3>
+                <ul>
+                    <li><input type="checkbox" id="water-earthquake"> Water (at least 1 gallon)</li>
+                    <li><input type="checkbox" id="hygiene-earthquake"> Hygiene essentials</li>
+                    <li><input type="checkbox" id="food-earthquake"> Food (canned goods, non perishable goods)</li> 
+                    <li><input type="checkbox" id="tape-earthquake"> Adhesive tape</li>
+                    <li><input type="checkbox" id="bandages-earthquake"> Adhesive bandages</li>
+                    <li><input type="checkbox" id="coldpacks-earthquake"> Instant cold packs (for bruises)</li>
+                    <li><input type="checkbox" id="flashlight-earthquake"> Flashlight</li>
+                    <li><input type="checkbox" id="batteries-earthquake"> Batteries</li>
+                    <li><input type="checkbox" id="gloves-earthquake"> Disposable gloves</li>
+                    <li><input type="checkbox" id="dustmask-earthquake"> Dust mask</li>
+                    <li><input type="checkbox" id="whistle-earthquake"> Whistle (signal for help)</li>
+                    <li><input type="checkbox" id="hygiene-products-earthquake"> Hygiene products (hand sanitizer, toothbrush and toothpaste, etc)</li> 
+                    <li><input type="checkbox" id="documents-earthquake"> Important documents (for identification)</li> 
+                    <li><input type="checkbox" id="medications-earthquake"> Personal medications</li>
+                    <li><input type="checkbox" id="phone-radio-earthquake"> Mobile phone or Radio (communication and updates)</li> 
+                </ul>
+            `;
+        } else if (disaster === 'volcanic-eruption') {
+            checklistItems = `
+                <h3>VOLCANIC ERUPTION EMERGENCY KIT</h3>
+                <ul>
+                    <li><input type="checkbox" id="n95mask-volcanic"> N95 Masks or respirators</li>
+                    <li><input type="checkbox" id="food-volcanic"> Food (canned goods, non perishable)</li>
+                    <li><input type="checkbox" id="water-volcanic"> Water (at least one gallon)</li>
+                    <li><input type="checkbox" id="hygiene-volcanic"> Hygiene essentials</li>
+                    <li><input type="checkbox" id="goggles-volcanic"> Goggles (to protect your eyes from dust particles)</li>
+                    <li><input type="checkbox" id="gloves-volcanic"> Disposable gloves</li>
+                    <li><input type="checkbox" id="gauze-volcanic"> Bandages and sterile gauze</li>
+                    <li><input type="checkbox" id="burncream-volcanic"> Burn cream/ aloe vera for minor burns</li>
+                    <li><input type="checkbox" id="wipes-volcanic"> Antiseptic wipes or alcohol pads</li>
+                    <li><input type="checkbox" id="eyedrops-volcanic"> Eye drops </li> 
+                    <li><input type="checkbox" id="flashlight-volcanic"> Flashlight</li>
+                    <li><input type="checkbox" id="batteries-volcanic"> Batteries</li>
+                    <li><input type="checkbox" id="saline-volcanic"> Saline solution (if volcano ash gets into eyes)</li>
+                    <li><input type="checkbox" id="documents-volcanic"> Important documents (identification)</li> 
+                    <li><input type="checkbox" id="medications-volcanic"> Personal medications</li>
+                    <li><input type="checkbox" id="phone-radio-volcanic"> Mobile phone or Radio (communication and updates)</li> 
+                </ul>
+            `;
+        } else if (disaster === 'typhoon') {
+            checklistItems = `
+                <h3>TYPHOON EMERGENCY KIT</h3>
+                <ul>
+                    <li><input type="checkbox" id="waterproof-bandages-typhoon"> Waterproof bandages</li>
+                    <li><input type="checkbox" id="gauze-typhoon"> Sterile gauze and adhesive tape</li>
+                    <li><input type="checkbox" id="food-typhoon"> Food (canned goods)</li>
+                    <li><input type="checkbox" id="water-typhoon"> Water (at least one gallon)</li>
+                    <li><input type="checkbox" id="whistle-typhoon"> Whistle</li>
+                    <li><input type="checkbox" id="tweezers-typhoon"> Tweezers and scissors</li>
+                    <li><input type="checkbox" id="flashlight-typhoon"> Flashlights</li>
+                    <li><input type="checkbox" id="hygiene-typhoon"> Hygiene essentials</li>
+                    <li><input type="checkbox" id="batteries-typhoon"> Batteries</li>
+                    <li><input type="checkbox" id="blanket-typhoon"> Emergency blanket</li>
+                    <li><input type="checkbox" id="cash-typhoon"> Cash</li>
+                    <li><input type="checkbox" id="radio-typhoon"> Battery powered radio</li>
+                    <li><input type="checkbox" id="medicine-typhoon"> Medicine</li>
+                    <li><input type="checkbox" id="raincoat-typhoon"> Raincoat and other waterproof clothing (protection in rain) </li> 
+                    <li><input type="checkbox" id="matches-typhoon"> Matches or lighters and candles</li>
+                    <li><input type="checkbox" id="tarpulin-typhoon"> Tarpulin (temporary shelter/protection in rain)</li>
+                    <li><input type="checkbox" id="rainboots-typhoon"> Rain boots </li> 
+                    <li><input type="checkbox" id="documents-typhoon"> Important documents (inside waterproof bags like zip lock bags)</li> 
+                    <li><input type="checkbox" id="phone-radio-typhoon"> Mobile phone or Radio (for communication and updates)</li> 
+                </ul>
+            `;
+        }
+        document.getElementById('checklist-items').innerHTML = checklistItems;
+    }
+</script>
+<script>
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showDisasterTips(disaster) {
+            let tips = '';
+            if (disaster === 'earthquake') {
+                tips = `
+                    <h2>Earthquake Safety Tips</h2>
+                    <h3>BEFORE</h3>
+                    <ul>
+                        <li><b>Secure your home:</b>
+                            <ul>
+                                <li>Secure heavy objects (bookcases, mirrors, artwork) to walls.</li>
+                                <li>Store breakable items in low cabinets or on shelves with latches.</li>
+                                <li>Make sure all gas appliances have flexible connectors.</li>
+                            </ul>
+                        </li>
+                        <li><b>Create an emergency plan:</b>
+                            <ul>
+                                <li>Designate a safe meeting place for your family.</li>
+                                <li>Practice evacuation routes.</li>
+                                <li>Prepare an emergency kit with food, water, first-aid supplies, a flashlight, and a battery-powered radio.</li>
+                                <li>Learn CPR and first aid.</li>
+                                <li>Know your community's earthquake plan.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>DURING</h3>
+                    <ul>
+                        <li><b>Drop, cover, and hold on:</b>
+                            <ul>
+                                <li>Drop to the ground, take cover under a sturdy piece of furniture, and hold on until the shaking stops.</li>
+                                <li>If you are outdoors, move away from buildings, trees, and power lines.</li>
+                                <li>If you are in a car, pull over to a safe location and stay inside.</li>
+                                <li>Stay calm and avoid panic.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h3>AFTER</h3>
+                    <ul>
+                        <li><b>Check for injuries and provide first aid.</b>
+                            <ul>
+                                <li>Check for gas leaks, electrical hazards, and structural damage.</li>
+                                <li>Listen to emergency broadcasts for instructions.</li>
+                                <li>Avoid using the phone unless it's an emergency.</li>
+                                <li>Do not enter damaged buildings.</li>
+                                <li>Be prepared for aftershocks.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+ <h2>EARTHQUAKE DO’S AND DONT’S</h2>
+                    <h3>DO'S</h3>
+                    <table>
+                      <tr>
+                        <th>Do</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Secure heavy objects to walls.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Create an emergency plan and practice it.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Learn CPR and first aid.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Keep a flashlight, battery-powered radio, and first-aid kit handy.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay calm and avoid panic during an earthquake.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Check for injuries and provide first aid after an earthquake.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Listen to emergency broadcasts for instructions.</td>
+                      </tr>
+                    </table>
+                    </table>
+
+                    <h3>DON'TS</h3>
+                    <table>
+                      <tr>
+                        <th>Don't</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Stand near windows or under heavy objects.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Run outside during an earthquake.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Use the phone unless it's an emergency.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Enter damaged buildings.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Drink water from damaged pipes.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Ignore aftershocks.</td>
+                      </tr>
+                    </table>
+                `;
+            } else if (disaster === 'volcanic-eruption') {
+                tips = `
+                    <h2>Volcanic Eruption Safety Tips</h2>
+                    <h3>BEFORE</h3>
+                    <ul>    <li><b>Know your risk:</b> Identify if you live near a volcano and understand your local evacuation plan.</li>
+                        <li><b>Prepare an emergency kit:</b> Include food, water, first-aid supplies, a flashlight, a battery-powered radio, extra clothes, important documents, and a face mask.</li>
+
+                        <li><b>Secure your home:</b> Close and seal windows and doors to minimize ash entry.
+</li>
+                        <li><b>Stay informed:</b> Monitor news reports and official sources for updates on volcanic activity.
+</li>
+                                           </ul>
+<h3>DURING</h3>
+<ul><li><b>Stay indoors:</b> Seek shelter in a sturdy building, away from windows.</li>
+<li><b>Wear a face mask:</b> Protect your respiratory system from ash and gases.</li>
+<li><b>Listen to authorities:</b> Follow instructions from local officials and emergency responders.</li>
+<li><b>If you are outdoors:</b> Move away from the volcano and seek shelter in a safe location.</li></ul>
+
+<h3>AFTER</h3>
+<ul><li><b>Check for injuries:</b> Provide first aid if necessary.</li>
+<li><b>Avoid ash-covered areas: </b>Ash can be harmful to health and can cause structural damage.</li>
+<li><b>Clean up ash:</b> Remove ash from roofs, gutters, and other areas.</li>
+<li><b>Stay informed:</b> Monitor news reports and official sources for updates on volcanic activity and recovery efforts.</li</li>
+                                           </ul>
+<h3>DURING</h3>
+<ul><li><b>Stay indoors:</b> Seek shelter in a sturdy building, away from windows.</li>
+<li><b>Wear a face mask:</b> Protect your respiratory system from ash and gases.</li>
+<li><b>Listen to authorities:</b> Follow instructions from local officials and emergency responders.</li>
+<li><b>If you are outdoors:</b> Move away from the volcano and seek shelter in a safe location.</li></ul>
+
+<h3>AFTER</h3>
+<ul><li><b>Check for injuries:</b> Provide first aid if necessary.</li>
+<li><b>Avoid ash-covered areas: </b>Ash can be harmful to health and can cause structural damage.</li>
+<li><b>Clean up ash:</b> Remove ash from roofs, gutters, and other areas.</li>
+<li><b>Stay informed:</b> Monitor news reports and official sources for updates on volcanic activity and recovery efforts.</li></ul>
+
+                    <h2>VOLCANIC ERUPTION DO’S AND DONT’S</h2>
+                    <h3>DO'S</h3>
+                    <table>
+                      <tr>
+                        <th>Do</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Know your risk and evacuation plan.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Prepare an emergency kit.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Secure your home.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay informed about volcanic activity.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay indoors during an eruption.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Wear a face mask to protect your respiratory system.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Follow instructions from authorities.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                  
+                        <td>Move to higher ground if possible.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Seek shelter in a safe location.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Check for injuries and provide first aid.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Avoid ash-covered areas.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Clean up ash from roofs and gutters.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay informed about recovery efforts.</td>
+                      </tr>
+                    </table>
+                    </table>
+
+                    <h3>DON'TS</h3>
+                    <table>
+                      <tr>
+                        <th>Don't</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Ignore warnings or evacuation orders.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Avoid areas near the volcano or prone to lahars.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Don't touch or breathe in volcanic ash.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Don't enter damaged buildings.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Don't use the phone unless it's an emergency.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Ignore aftershocks or continued volcanic activity.</td>
+                      </tr>
+                    </table>
+                `;
+            } else if (disaster === 'typhoon') {
+                tips = `
+                    <h2>Typhoon Safety Tips</h2>
+                    <h3>BEFORE</h3>
+                    <ul>
+                        <li><b>Prepare an Emergency Kit:</b> Include food, water, first-aid supplies, a flashlight, a battery-powered radio, extra clothes, important documents, and cash.</li>
+                        <li><b>Create an evacuation plan:</b> Designate a safe meeting place for your family and practice evacuation routes.</li>
+                        <li><b>Secure your home:</b> Inspect your home for vulnerabilities and secure loose objects outside that could become dangerous projectiles. Install storm shutters or board up windows with plywood.</li>
+                        <li><b>Stay informed:</b> Check weather updates regularly from reliable sources like news outlets and PAGASA. Install weather apps on your phone for real-time updates and warnings.</li>
+                    </ul>
+
+                    <h3>DURING</h3>
+                    <ul>
+                        <li><b>Stay indoors:</b> Your home is the safest place to be during a typhoon. Avoid going outside unless absolutely necessary.</li>
+                        <li><b>Keep everyone calm:</b> Panic can lead to mistakes and injuries.</li>
+                        <li><b>Monitor local radio:</b> Stay informed about evacuation warnings and other typhoon updates.</li>
+                        <li><b>Manage supplies:</b> Consume perishables first and ration food and water responsibly.</li>
+                        <li><b>Conserve phone battery:</b> Only use your mobile phone for essential communication.</li>
+                        <li><b>Flood precautions:</b> If flooding occurs, turn off the main power and be wary of live wires or water-logged outlets.</li>
+                        <li><b>Tend to injuries:</b> Immediately address any injuries with your emergency kit.</li>
+                    </ul>
+
+                    <h3>AFTER</h3>
+                    <ul>
+                        <li><b>Assess the damage:</b> Carefully inspect your home and surroundings for damage. Check for potential hazards and structural damage.</li>
+                        <li><b>Stay informed:</b> Listen to local radio or television stations for advice and instructions from the local government.</li>
+                        <li><b>Avoid disaster areas:</b> Stay away from disaster areas to allow rescue and recovery work to proceed.</li>
+                        <li><b>Drive cautiously:</b> Drive only when necessary and be careful as streets will be filled with debris.</li>
+                        <li><b>Report hazards:</b> Report broken sewer or water mains, loose or dangling power wires, and dead animals to local officials.</li>
+                        <li><b>Prevent fires:</b> Local water pressure may be low, making firefighting more difficult.</li></ul>
+                                           
+<h2>TYPHOON DO’S AND DONT’S</h2>
+                    <h3>DO'S</h3>
+                    <table>
+                      <tr>
+                        <th>Do</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Prepare an emergency kit.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Create an evacuation plan.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Secure your home.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay informed about weather updates.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay indoors during the typhoon.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Keep everyone calm.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Monitor local radio for updates.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Manage supplies responsibly.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Conserve phone battery.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Tend to injuries promptly.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Assess damage after the typhoon.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay informed about recovery efforts.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Avoid disaster areas.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Drive cautiously.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Report hazards to authorities.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Prevent fires.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Check food for spoilage.</td>
+                      </tr>
+                      <tr>
+                        <td>✓</td>
+                        <td>Stay away from riverbanks.</td>
+                      </tr>
+                    </table>
+
+                    <h3>DON'TS</h3>
+                    <table>
+                      <tr>
+                        <th>Don't</th>
+                        <th>Action</th>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Go outside during the typhoon unless absolutely necessary.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Avoid panic and rash decisions.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Consume perishables before non-perishable food.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Limit phone use to essential communication.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Touch live wires or water-logged outlets.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Avoid driving unless necessary.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Enter damaged buildings.</td>
+                      </tr>
+                      <tr>
+                        <td>✗</td>
+                        <td>Ignore aftershocks or continued heavy rainfall.</td>
+                      </tr>
+                    </table>
+                `;
+            }
+            document.getElementById('disaster-tips').innerHTML = tips;
+        }
+
+        function getWeather() {
+            alert('Checking weather updates...');
+        }
+    </script>
+</body>
+</html>
